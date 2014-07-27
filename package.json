@@ -1,0 +1,30 @@
+{
+  "name": "ir-codes",
+  "version": "0.0.1",
+  "description": "Generate manufacturer specific IR signal durations to use with Tessel's IR module",
+  "main": "index.js",
+  "scripts": {
+    "test": "tinytap -e 'node' ./test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/technicalmachine/ir-codes.git"
+  },
+  "keywords": [
+    "infrared",
+    "ir",
+    "tessel",
+    "manufacturer",
+    "signal",
+    "durations"
+  ],
+  "devDependencies" : {
+    "tinytap" : "~0.2.0"
+  },
+  "author": "jon@technical.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technicalmachine/ir-codes/issues"
+  },
+  "homepage": "https://github.com/technicalmachine/ir-codes"
+}

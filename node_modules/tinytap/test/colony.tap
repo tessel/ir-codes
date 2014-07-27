@@ -1,0 +1,1104 @@
+
+> runtime@0.2.0 test /Users/tim/Code/technical/workspace/firmware/deps/runtime
+> tap -e './out/Release/colony' test/suite/*.js test/issues/*.js test/net/*.js
+
+TAP version 13
+# __proto__.js
+# true
+ok 1 test/suite/__proto__.js
+
+# arguments.js
+ok 2
+ok 3
+ok 4 test/suite/arguments.js
+
+# array.js
+ok 5 running in colony
+ok 6 array::push - length
+ok 7 array::push - values added, accepts multiple args
+ok 8 array::pop - length
+ok 9 array::pop - values popped
+ok 10 array::pop - length modified
+ok 11 array::pop - null values popped
+ok 12 array::pop - length unmodified when 0
+ok 13 undefined
+ok 14 undefined
+ok 15 undefined
+ok 16 array::unshift - length
+ok 17 array::unshift - correct
+ok 18 array::unshift - unshift redefines length
+ok 19 array::shift - length
+ok 20 array::shift - shift redefines length
+ok 21 array::shift - shifted value
+ok 22 array::shift - null values shifted
+ok 23 array::shift - length unmodified when 0
+ok 24 undefined
+ok 25 undefined
+ok 26 undefined
+ok 27 slice(1) returns full array
+ok 28 new Array(50) length is 50
+ok 29 setting sparse high array index extends array
+ok 30 setting non-sparse high array index extends array
+# array full: [ 1, 2, 3 ] 3
+ok 31 undefined
+# array two undefined: [ , , 3 ] 3
+ok 32 undefined
+# array three undefined: [ , ,  ] 3
+ok 33 undefined
+ok 34 array reduce
+ok 35 array reduce with init
+ok 36 array concats values
+# [ 1 ]
+ok 37 array concats values and arrays
+# [ 5, 1 ]
+ok 38 array concats arrays
+# [ 5, 6, 7 ]
+ok 39 array concats arrays
+# [ 5, 6, 7, 8 ]
+ok 40 array reverses in place
+ok 41 array reverses
+ok 42 array reverses
+ok 43 Array::join called on buffer works
+ok 44 Array::reduce called on non-array object succeeds
+ok 45 test/suite/array.js
+
+# bind.js
+ok 46 running in colony
+ok 47 test 1 bound arguments correctly
+# { 0: 1, length: 1 }
+ok 48 test 2 bound arguments correctly
+# { 1: 'extra args', 0: 2, length: 2 }
+ok 49 test 3 bound arguments correctly
+# { 1: 'extra args', 2: 'more extra args', 3: 1, 4: 2, 5: 3, 0: 3, length: 6 }
+ok 50 last numerical value included
+ok 51 test/suite/bind.js
+
+# bitmath.js
+ok 52 running in colony
+ok 53 xor operator
+ok 54 test/suite/bitmath.js
+
+# buffer.js
+ok 55 running in colony
+ok 56 buffer.length
+ok 57 buffer indexing
+ok 58 buffer high indexing
+ok 59 buffer char length
+ok 60 buffer char index
+ok 61 buffer fixed size len
+ok 62 buffer.fill worked
+ok 63 Buffer.isBuffer succeeds on buffer
+ok 64 Buffer.isBuffer fails on non-buffer (array)
+ok 65 Buffer.isBuffer fails on non-buffer (string)
+ok 66 Buffer.isBuffer fails on non-buffer (null)
+ok 67 buffer.copy works
+ok 68 buffer.slice length
+ok 69 buffer.slice works
+ok 70 error on buffer copy to non-buffer target
+# [ 3, 171, 35, 66,  ]
+ok 71 readUInt8 and assert work
+ok 72 readUInt8
+ok 73 readUInt16LE
+ok 74 readUInt16BE
+ok 75 readUInt32LE
+ok 76 readUInt32BE
+ok 77 readInt8
+ok 78 readInt16LE
+ok 79 readInt16BE
+ok 80 readInt32LE
+ok 81 readInt32BE
+ok 82 readFloatLE
+# 1
+ok 83 readFloatBE
+# 1
+ok 84 readDoubleLE
+ok 85 readDoubleBE
+ok 86 buffer read offsets
+ok 87 writeUInt8
+ok 88 writeUInt16LE
+ok 89 writeUInt16BE
+ok 90 writeUInt32LE
+ok 91 writeUInt32BE
+ok 92 writeInt8
+ok 93 writeInt16LE
+ok 94 writeInt16BE
+ok 95 writeInt32LE
+ok 96 writeInt32BE
+ok 97 writeFloatLE
+# <Buffer 00 00 00 80 3f 00 00 00 00 00> 1
+ok 98 writeFloatBE
+# <Buffer 00 3f 80 00 00 00 00 00 00 00> 1
+ok 99 writeDoubleLE
+ok 100 writeDoubleBE
+ok 101 buffer write offsets
+ok 102 buffer concat length
+ok 103 buffer concat works
+ok 104 buffer toJSON works
+ok 105 readUInt8(0xff)
+ok 106 readInt8(0xff)
+ok 107 readUInt32LE(0xffff)
+ok 108 readUInt32BE(0xffff)
+ok 109 readUInt32LE(0xffffffff)
+ok 110 readUInt32BE(0xffffffff)
+# hex
+ok 111 hex encoding
+ok 112 hex encoding
+# 0xdeadbeef 0xcafebabe
+ok 113 invalid hex digits
+ok 114 invalid hex length
+# base64
+ok 115 base64 encoding (padded)
+ok 116 base64 encoding (not padded)
+# "hello world"
+# encoding
+ok 117 str -> base64 -> str
+# aGVsbG8gd29ybGQ=
+# <Buffer 68 65 6c 6c 6f 20 77 6f 72 6c 64>
+ok 118 str -> hex -> str
+# 68656c6c6f20776f726c64
+# <Buffer 68 65 6c 6c 6f 20 77 6f 72 6c 64>
+ok 119 test/suite/buffer.js
+
+# bug-bindnull.js
+ok 120 running in colony
+ok 121 No error
+ok 122 String passed
+ok 123 test/suite/bug-bindnull.js
+
+# bug-endwithcomments.js
+ok 124 test/suite/bug-endwithcomments.js
+
+# bug-foreach-null.js
+ok 125
+ok 126 test/suite/bug-foreach-null.js
+
+# bug-forinarray.js
+ok 127 running in colony
+ok 128 first index was null
+ok 129 for..in index is string
+ok 130 array string index is not null
+ok 131 for..in index is string
+ok 132 array string index is not null
+ok 133 for..in index is string
+ok 134 array string index is not null
+ok 135 for..in index is string
+ok 136 array string index is not null
+ok 137 for..in index is string
+ok 138 array string index is not null
+ok 139 for..in index is string
+ok 140 array string index is not null
+ok 141 test/suite/bug-forinarray.js
+
+# bug-regexreplace.js
+ok 142
+# \aa\aa\aa
+ok 143 test/suite/bug-regexreplace.js
+
+# bug-underscores.js
+ok 144 running in colony
+ok 145 simple variable scoping
+ok 146 var decl underscores are escaped properly
+ok 147 var underscores
+ok 148 var underscores in lvalue of assignment
+ok 149 underscore in lvalue of member expression
+ok 150 dynamic property values
+ok 151 underscore in member and base
+ok 152 underscores in member properties not undefined
+ok 153 underscores in member properties in member properties not undefined
+ok 154 test/suite/bug-underscores.js
+
+# builtin.js
+ok 155 running in colony
+ok 156 assert
+ok 157 buffer
+ok 158 child_process
+ok 159 crypto
+ok 160 dgram
+ok 161 events
+ok 162 fs
+ok 163 http
+ok 164 net
+ok 165 os
+ok 166 path
+ok 167 punycode
+ok 168 querystring
+ok 169 stream
+ok 170 string_decoder
+ok 171 tty
+ok 172 url
+ok 173 util
+ok 174 zlib
+ok 175 test/suite/builtin.js
+
+# console.js
+ok 176
+ok 177
+ok 178
+ok 179
+ok 180 test/suite/console.js
+
+# crypto.js
+# <Buffer 73 09 6b 07 b8 e3 72 ca 17 4f d3 48 1a 5d 0f 02>
+# <Buffer df 14 9b 82 06 30 58 17 62 37 fc 77 26 3f 85 2b 25 30 90 e2 bf 2a 98 2e 4f 6a f3 af 0c e6 4d c3 58 65 d3 50 ed 73 85 1f 29 8d 12 eb f4 70 b4 79 f7 c5 93 ...>
+ok 181
+ok 182 test/suite/crypto.js
+
+# date.js
+# true
+# typeof Date.now number
+# true
+# true
+# false
+# toString Thu Jan 01 1970 00:57:40 GMT-0800 (UTC)
+# true
+# getDate 31
+# true
+# getDay 3
+# true
+# getFullYear 1969
+# true
+# getHours 16
+# true
+# getMilliseconds 589
+# true
+# getMinutes 57
+# true
+# getMonth 11
+# true
+# getSeconds 40
+# true
+# getTime 3460589.568
+# true
+# getYear 69
+# true
+# toISOString 1970-01-01T00:00:00.000Z
+# true
+# toJSON 1970-01-01T00:00:00.000Z
+ok 183 test/suite/date.js
+
+# delete.js
+# true
+# undefined
+ok 184 test/suite/delete.js
+
+# early-return.js
+ok 185 test/suite/early-return.js
+
+# encoding.js
+ok 186
+ok 187
+ok 188 test/suite/encoding.js
+
+# error.js
+ok 189 running in colony
+ok 190 undefined
+ok 191 undefined
+ok 192 undefined
+ok 193 undefined
+ok 194 undefined
+ok 195 undefined
+ok 196 undefined
+ok 197 undefined
+ok 198 undefined
+ok 199 undefined
+ok 200 undefined
+ok 201 undefined
+ok 202 undefined
+ok 203 undefined
+ok 204 undefined
+ok 205 undefined
+ok 206 undefined
+ok 207 undefined
+ok 208 undefined
+ok 209 undefined
+ok 210 undefined
+ok 211 undefined
+ok 212 test/suite/error.js
+
+# etters.js
+ok 213 running in colony
+ok 214 normal property getter
+ok 215 getter defined
+ok 216 called setter
+ok 217 setter worked
+ok 218 normal property getter
+ok 219 setter removed value # TODO
+ok 220 setter without getter worked
+ok 221 setter didnt change value
+ok 222 test/suite/etters.js
+
+# fs-streams.js
+# writestream HELLOWORLD
+ok 223
+# readstream HELLOWORLD
+ok 224
+# done
+ok 225 test/suite/fs-streams.js
+
+# fs.js
+ok 226 fs.readFileSync is buffer
+ok 227 fs.readFileSync accepts encoding
+ok 228 fs.readdirSync is array
+ok 229 writeFileSync == readFileSync of same file
+ok 230 appendFileSync works
+ok 231 written file exists in readdirSync
+ok 232 written file exists
+ok 233 unlinked file no longer in readdirSync
+ok 234 deleted file no longer exists
+ok 235 written file exists in readdirSync...
+ok 236 renamed file doesnt still exist
+ok 237 but under its new name does
+ok 238 and is in new position
+ok 239 file length matches writeFileSync
+ok 240 truncated file length is 0
+# mkdir
+ok 241 mkdir before is missing
+ok 242 mkdir after is there
+ok 243 cannot unlink dir
+ok 244 mkdir inside mkdir works
+ok 245 cannot rmdir non-empty dir
+ok 246 child dir file can be unlinked
+ok 247 delete dir after empty
+# stats
+ok 248 filesize of written file is correct
+# 16 16
+ok 249 file isFile
+ok 250 file isDirectory
+ok 251 dir isFile
+ok 252 dir isDirectory
+ok 253 readFile is async and works
+ok 254 readFile can return (not throw) err
+ok 255 test/suite/fs.js
+
+# function.js
+ok 256 running in colony
+ok 257 function arity == 5
+ok 258 test/suite/function.js
+
+# hash.js
+# ... nullifying values
+# ... setting new values
+# ... should output some undefined values:
+# hitheres => goodbye
+# abcdefghijkl => cob
+# heya => there
+# abcdefghij => pear
+# ... array test
+# 5 ==5
+# 5 ==5
+# 5 ==5
+# 21 ==21
+ok 259 test/suite/hash.js
+
+# json.js
+ok 260 running in colony
+ok 261 json parse object
+ok 262 json parse array
+ok 263 json object is real object
+ok 264 json array is real array
+ok 265 stringify array
+ok 266 stringify fn # TODO
+ok 267 stringify obj
+ok 268 empty obj
+ok 269 empty array # TODO
+ok 270 indentation formatting
+ok 271 "this" value correct in replacer
+ok 272 "this" value correct in replacer
+ok 273 "this" value correct in replacer
+ok 274 "this" value correct in replacer
+ok 275 "this" value correct in replacer
+ok 276 json replacer works
+# {"week":45,"month":7}
+ok 277 test/suite/json.js
+
+# jsonload.js
+ok 278 running in colony
+ok 279 json imported
+ok 280 json imported explicitly
+ok 281 test/suite/jsonload.js
+
+# keywords.js
+ok 282
+ok 283 test/suite/keywords.js
+
+# math.js
+ok 284 running in colony
+ok 285 octal encoding
+ok 286 Math.E
+ok 287 Math.LN2
+ok 288 Math.LN10
+ok 289 Math.LOG2E
+ok 290 Math.LOG10E
+ok 291 Math.PI
+ok 292 Math.SQRT1_2
+ok 293 Math.SQRT2
+ok 294 Math.clz32(nil)
+ok 295 Math.clz32(1)
+ok 296 Math.clz32(22)
+ok 297 Math.clz32(true)
+ok 298 Math.clz32(3.5)
+ok 299 Math.clz32(-3.5)
+ok 300 Math.clz32([NaN, Infinity, -Infinity, 0, -0, null, undefined, "foo", {}, []])
+ok 301 Math.sign(3)
+ok 302 Math.sign(-3)
+ok 303 Math.sign("-3")
+ok 304 Math.sign(0)
+ok 305 Math.sign(-0)
+ok 306 Math.sign(NaN)
+ok 307 Math.sign("foo")
+ok 308 Math.sign()
+ok 309 Math.tanh(0)
+ok 310 Math.tanh(Infinity)
+ok 311 Math.tanh(1)
+ok 312 Math.trunc(13.37)
+ok 313 Math.trunc(42.84)
+ok 314 Math.trunc(0.123)
+ok 315 Math.trunc(-0.123)
+ok 316 Math.trunc("-1.123")
+ok 317 Math.trunc(NaN)
+ok 318 Math.trunc("foo")
+ok 319 Math.trunc()
+ok 320 Math.log2(3)
+ok 321 Math.log2(2)
+ok 322 Math.log2(1)
+ok 323 Math.log2(0)
+ok 324 Math.log2(-2)
+ok 325 Math.log2(1024)
+ok 326 Math.fround(0)
+ok 327 Math.fround(1)
+ok 328 Math.fround(1.337)
+ok 329 Math.fround(1.5)
+ok 330 Math.fround(NaN)
+ok 331 Math.log1p(1)
+ok 332 Math.log1p(0)
+ok 333 Math.log1p(-1)
+ok 334 Math.log1p(-2)
+ok 335 Math.hypot(3, 4)
+ok 336 Math.hypot(3, 4, 5)
+ok 337 Math.hypot()
+ok 338 Math.hypot(NaN)
+ok 339 Math.hypot(3, 4, "foo")
+ok 340 Math.hypot(3, 4, "5")
+ok 341 Math.hypot(-3)
+ok 342 Math.imul(2, 4)
+ok 343 Math.imul(-1, 8)
+ok 344 Math.imul(-2, -2)
+ok 345 Math.imul(0xffffffff, 5)
+ok 346 Math.imul(0xfffffffe, 5)
+ok 347 Math.round(20.49)
+ok 348 Math.round(20.5)
+ok 349 Math.round(-20.5)
+ok 350 Math.round(-20.51)
+ok 351 Math.round(1.005*100)/100
+ok 352 Math.pow
+ok 353 test/suite/math.js
+
+# parse-numbers.js
+ok 354 running in colony
+ok 355 undefined
+ok 356 undefined
+# base 10: 10
+ok 357 undefined
+ok 358 undefined
+# base 16: 16
+ok 359 undefined
+ok 360 undefined
+# base  2: 2
+ok 361 octal int
+ok 362 octal float
+ok 363 radix 0
+ok 364 undefined
+ok 365 undefined
+ok 366 undefined
+ok 367 undefined
+ok 368 test/suite/parse-numbers.js
+
+# primitive.js
+ok 369 running in colony
+ok 370 null < positive
+ok 371 positive < null
+ok 372 null > negative
+ok 373 null not > 0
+ok 374 null not < 0
+ok 375 null != 0
+ok 376 null < null
+ok 377 null > null
+ok 378 null == null
+ok 379 undefined < positive # TODO
+ok 380 undefined > positive # TODO
+ok 381 in works and is boolean
+ok 382 undefined
+ok 383 undefined
+ok 384 undefined
+ok 385 undefined
+ok 386 undefined
+ok 387 undefined
+ok 388 undefined
+ok 389 undefined
+ok 390 undefined
+ok 391 undefined
+ok 392 ternary works with boolean operators
+ok 393 void
+ok 394 isNaN
+ok 395 Boolean prototype exposed
+ok 396 Boolean constructor exposed
+ok 397 Number prototype exposed
+ok 398 Number constructor exposed
+ok 399 Number(true) == 1
+ok 400 String prototype exposed
+ok 401 String constructor exposed
+ok 402 String(1) == "1"
+ok 403 Function prototype exposed
+ok 404 Function constructor exposed
+ok 405 Array prototype exposed
+ok 406 Array constructor exposed
+ok 407 RegExp prototype exposed
+ok 408 RegExp constructor exposed
+ok 409 Object prototype exposed
+ok 410 Object constructor exposed
+ok 411 Object() constructor
+# { a: 5 }
+ok 412 Object(obj) constructor
+ok 413 test/suite/primitive.js
+
+# regex.js
+ok 414 running in colony
+ok 415 regex match
+ok 416 \S in class matches non-whitespace
+ok 417 \S in class does not match whitespace
+ok 418 regex compilation from connect socket.js
+ok 419 regex compilation from path.js
+ok 420 regex compilation from url.js
+ok 421 \d matches numbers
+ok 422 matches numbers and whitespace
+ok 423 matches char classes
+ok 424 test() works
+ok 425 non-global replace
+ok 426 global replace
+ok 427 regex replace with fn
+ok 428 test/suite/regex.js
+
+# shift.js
+ok 429 running in colony
+ok 430 1 << 0
+ok 431 1 << 8
+ok 432 1 << 256
+ok 433 256 >>> 8
+ok 434 -256 >>> 8
+ok 435 256 >> 8
+ok 436 -256 >> 8
+ok 437 0x87654321 << 12
+ok 438 0x87654321 >>> 12
+ok 439 0x87654321 >> 12
+# 4294473300
+ok 440 -256 >>> 0
+# 4294967040 == 4294967040
+ok 441 test/suite/shift.js
+
+# streams.js
+# <Buffer 31>
+# <Buffer 32>
+# <Buffer 33>
+ok 442 test/suite/streams.js
+
+# string.js
+ok 443 running in colony
+ok 444 substring
+ok 445 indexOf
+ok 446 lastIndexOf
+ok 447 test/suite/string.js
+
+# timers.js
+ok 448 running in colony
+# timeout id: 2
+ok 449 args passed into callback
+ok 450 null args allowed in callback
+ok 451 null args allowed in callback
+ok 452 "this" value in timer is global object
+ok 453 console.log of global works # TODO
+ok 454 test/suite/timers.js
+
+# truthy.js
+ok 455 running in colony
+ok 456 0 is falsy
+ok 457 false is falsy
+ok 458 undefined is falsy
+ok 459 nil is falsy
+ok 460 "" is falsy
+ok 461 [] is truthy
+ok 462 "0" is truthy
+ok 463 {} is truthy
+ok 464 0 is falsy
+ok 465 false is falsy
+ok 466 undefined is falsy
+ok 467 nil is falsy
+ok 468 "" is falsy
+ok 469 [] is truthy
+ok 470 "0" is truthy
+ok 471 {} is truthy
+ok 472 test/suite/truthy.js
+
+# try.js
+ok 473 running in colony
+ok 474 error should not escape scope of try # TODO
+ok 475
+ok 476
+ok 477
+ok 478 error exists
+ok 479 test/suite/try.js
+
+# unicode.js
+# z☃
+ok 480 test/suite/unicode.js
+
+# url.js
+ok 481 running in colony
+ok 482 url parses
+ok 483 test/suite/url.js
+
+# with.js
+ok 484 running in colony
+ok 485
+ok 486
+ok 487
+ok 488
+ok 489 undefined
+ok 490 undefined
+ok 491 undefined
+ok 492 test/suite/with.js
+
+# issue-beta-100.js
+ok 493
+# [ 0, 0, 0, 6, 104, 105, 32, 106, 111, 110 ]
+ok 494 test/issues/issue-beta-100.js
+
+# issue-beta-101.js
+ok 495
+# <Buffer 00 00 00 06 68 69 20 6a 6f 6e>
+ok 496
+# hello
+ok 497 test/issues/issue-beta-101.js
+
+# issue-beta-108.js
+ok 498
+ok 499 test/issues/issue-beta-108.js
+
+# issue-beta-131.js
+ok 500
+ok 501 test/issues/issue-beta-131.js
+
+# issue-beta-140.js
+ok 502 running in colony
+ok 503 array concat length
+# --> 5
+ok 504 array concat
+# [ 2, 2, 0, ,  ]
+ok 505 array length
+# 5
+ok 506 test/issues/issue-beta-140.js
+
+# issue-beta-148.js
+ok 507
+# 3465282.568
+# 3465282.568
+ok 508 test/issues/issue-beta-148.js
+
+# issue-beta-159.js
+ok 509
+# 02
+ok 510
+# 55
+ok 511 test/issues/issue-beta-159.js
+
+# issue-beta-162.js
+# Starting outer loop.
+# .. Starting inner loop # 1
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #1 after 50ms. (5 iterations)
+# .. Starting inner loop # 2
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #2 after 50ms. (5 iterations)
+# .. Starting inner loop # 3
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #3 after 50ms. (5 iterations)
+# .. Starting inner loop # 4
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #4 after 50ms. (5 iterations)
+# .. Starting inner loop # 5
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #5 after 50ms. (5 iterations)
+# .. Starting inner loop # 6
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #6 after 50ms. (5 iterations)
+# .. Starting inner loop # 7
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #7 after 50ms. (5 iterations)
+# .. Starting inner loop # 8
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #8 after 50ms. (5 iterations)
+# .. Starting inner loop # 9
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #9 after 50ms. (5 iterations)
+# .. Starting inner loop # 10
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #10 after 50ms. (5 iterations)
+# .. Starting inner loop # 11
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #11 after 50ms. (5 iterations)
+# .. Starting inner loop # 12
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #12 after 50ms. (5 iterations)
+# .. Starting inner loop # 13
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #13 after 50ms. (5 iterations)
+# .. Starting inner loop # 14
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #14 after 50ms. (5 iterations)
+# .. Starting inner loop # 15
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. Clearing inner loop #15 after 50ms. (5 iterations)
+# .. Starting inner loop # 16
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# .. -- looped [10ms]
+# Stopping outer loop after 1000ms (16 iterations)
+# .. -- looped [10ms]
+# .. Clearing inner loop #16 after 50ms. (5 iterations)
+ok 512 test/issues/issue-beta-162.js
+
+# issue-beta-170.js
+ok 513 running in colony
+ok 514 function is hoisted
+ok 515 test/issues/issue-beta-170.js
+
+# issue-beta-179.js
+# no more not oks
+ok 516 t
+ok 517 c
+ok 518 test/issues/issue-beta-179.js
+
+# issue-beta-180.js
+# 5
+ok 519
+ok 520 test/issues/issue-beta-180.js
+
+# issue-beta-180b.js
+ok 521 test/issues/issue-beta-180b.js
+
+# issue-beta-195.js
+ok 522 running in colony
+ok 523 undefined
+ok 524 undefined
+ok 525 undefined
+ok 526 undefined
+ok 527 undefined
+# { 5: true, hi: true, function hi() { }: true }
+ok 528 test/issues/issue-beta-195.js
+
+# issue-beta-200.js
+ok 529
+ok 530
+ok 531 test/issues/issue-beta-200.js
+
+# issue-beta-204.js
+ok 532 running in colony
+ok 533 true
+# 42 number
+ok 534 test/issues/issue-beta-204.js
+
+# issue-beta-207.js
+# arguments: 0 1 2
+# arguments: undefined 1 2
+# arguments: 1 undefined 2
+ok 535 test/issues/issue-beta-207.js
+
+# issue-beta-212.js
+ok 536 running in colony
+ok 537 undefined
+# base 10: "42"
+ok 538 undefined
+# base 16: "2a"
+ok 539 undefined
+# base  2: "101010"
+ok 540 undefined
+# base 24: "1i"
+ok 541
+ok 542
+ok 543
+ok 544
+ok 545 test/issues/issue-beta-212.js
+
+# issue-beta-213.js
+ok 546 running in colony
+ok 547 undefined
+ok 548 undefined
+# base 10: 1034834473185 == 1034834473185
+ok 549 undefined
+# base 16: f0f0f0f0e1 == f0f0f0f0e1
+ok 550 undefined
+ok 551 undefined
+# base 10: 1034834473185 == 1034834473185
+ok 552 undefined
+# base 16: f0f0f0f0e1 == f0f0f0f0e1
+ok 553 supports > 0xFFFFFFFF
+ok 554 test/issues/issue-beta-213.js
+
+# issue-beta-221.js
+ok 555 running in colony
+ok 556 undefined
+ok 557 undefined
+ok 558 test/issues/issue-beta-221.js
+
+# issue-beta-242.js
+ok 559 test/issues/issue-beta-242.js
+
+# issue-beta-243.js
+ok 560
+ok 561 test/issues/issue-beta-243.js
+
+# issue-beta-244.js
+ok 562
+ok 563
+# { 1: true, one: true }
+ok 564 test/issues/issue-beta-244.js
+
+# issue-beta-245.js
+ok 565 running in colony
+ok 566 empty elements allowed
+ok 567 test/issues/issue-beta-245.js
+
+# issue-beta-251.js
+# 567
+ok 568
+ok 569 test/issues/issue-beta-251.js
+
+# issue-beta-274.js
+ok 570 bitwise xor
+ok 571 not exponent
+ok 572 test/issues/issue-beta-274.js
+
+# issue-beta-294.js
+ok 573
+ok 574 test/issues/issue-beta-294.js
+
+# issue-beta-296.js
+ok 575
+ok 576
+ok 577
+ok 578 test/issues/issue-beta-296.js
+
+# issue-beta-314.js
+# { 1: { len: 1, arr: [] }, 2: { len: 1, arr: [] }, 0: { len: 1, arr: [] } }
+# [ 1, 2, 0 ]
+ok 579
+ok 580 test/issues/issue-beta-314.js
+
+# issue-beta-317.js
+ok 581 undefined
+ok 582 undefined
+ok 583 undefined
+ok 584 test/issues/issue-beta-317.js
+
+# issue-beta-319.js
+ok 585 undefined
+ok 586 Length should be 2: 2
+ok 587 undefined
+ok 588 test/issues/issue-beta-319.js
+
+# issue-beta-327.js
+ok 589
+ok 590 test/issues/issue-beta-327.js
+
+# issue-beta-334.js
+ok 591 UInt32
+ok 592 UInt32
+ok 593 UInt32
+ok 594 UInt32
+ok 595 error thrown by out of bounds write
+ok 596 error not thrown by out of bounds write
+ok 597 out of bounds write still writes
+ok 598 out of bounds write still writes
+ok 599 error thrown by out of bounds write
+ok 600 in bounds write succeeds
+ok 601 out of bounds write succeeds
+ok 602 test/issues/issue-beta-334.js
+
+# issue-beta-337.js
+ok 603 test/issues/issue-beta-337.js
+
+# issue-beta-338.js
+# <Buffer>
+ok 604 buffer.slice does not read past end.
+ok 605 test/issues/issue-beta-338.js
+
+# issue-beta-339.js
+# <Buffer 02 03 04>
+ok 606 buffer.slice accepts negative indices
+ok 607 test/issues/issue-beta-339.js
+
+# issue-beta-340.js
+# false
+ok 608 0 should short-circuit truthiness
+# 0
+ok 609 0 var should short-circuit truthiness
+# 42
+ok 610 0 should short-circuit falsiness
+# 42
+ok 611 0 var should short-circuit falsiness
+ok 612 test/issues/issue-beta-340.js
+
+# issue-beta-342.js
+ok 613
+ok 614
+ok 615
+ok 616
+ok 617
+ok 618 TypeError: Usage: Buffer.concat(list, [length])
+ok 619 test/issues/issue-beta-342.js
+
+# issue-beta-351.js
+ok 620
+ok 621 test/issues/issue-beta-351.js
+
+# issue-beta-352.js
+ok 622
+ok 623
+ok 624
+ok 625
+ok 626 test/issues/issue-beta-352.js
+
+# issue-beta-356.js
+ok 627
+ok 628 test/issues/issue-beta-356.js
+
+# issue-beta-73.js
+ok 629 test/issues/issue-beta-73.js
+
+# issue-beta-77.js
+ok 630
+ok 631 test/issues/issue-beta-77.js
+
+# issue-beta-81.js
+ok 632 running in colony
+ok 633 underscores in member properties not undefined
+ok 634 underscores in member properties in member properties not undefined
+ok 635 test/issues/issue-beta-81.js
+
+# issue-beta-84.js
+ok 636 original { name: 'adrian' }
+ok 637 Greetings from adrian
+ok 638 Object() { name: 'adrian' }
+ok 639 Greetings from zankich
+ok 640 Greetings from zankich
+ok 641 Object() { name: 'zankich' }
+ok 642 original { name: 'zankich' }
+ok 643 test/issues/issue-beta-84.js
+
+# issue-beta-87.js
+# 2
+# 2
+ok 644
+ok 645 test/issues/issue-beta-87.js
+
+# issue-beta-93.js
+# [ { name: 'adrian' } ]
+ok 646
+ok 647 test/issues/issue-beta-93.js
+
+# issue-beta-97.js
+ok 648 running in colony
+# Greetings from adrian
+ok 649 o.constructor
+ok 650 o.constructor.booyakasha()
+ok 651 test/issues/issue-beta-97.js
+
+# issue-beta-98.js
+ok 652 running in colony
+ok 653 array [] len 0
+ok 654 array keys constant
+ok 655 array key set
+ok 656 test/issues/issue-beta-98.js
+
+# log-global.js
+# { Number: [Function], _new: [Function], setImmediate: [Function], Function: [Function], _in: [Function], setInterval: [Function], Math: { log: [Function], acosh: [Function], cosh: [Function], round: [Function], random: [Function], fround: [Function], tanh: [Function], asinh: [Function], log1p: [Function], max: [Function], sqrt: [Function], PI: 3.1415926535898, pow: [Function], expm1: [Function], acos: [Function], E: 2.718281828459, LN10: 2.302585092994, SQRT2: 1.4142135623731, SQRT1_2: 0.70710678118655, log10: [Function], LOG2E: 1.442695040889, clz32: [Function], cos: [Function], imul: [Function], trunc: [Function], LN2: 0.69314718055995, cbrt: [Function], ceil: [Function], tan: [Function], exp: [Function], abs: [Function], sign: [Function], log2: [Function], asin: [Function], min: [Function], LOG10E: 0.43429448190325, floor: [Function], atanh: [Function], atan2: [Function], hypot: [Function], sin: [Function], atan: [Function] }, _cont: {}, _bit: { band: [Function], rshift: [Function], bor: [Function], bnot: [Function], bswap: [Function], bxor: [Function], tobit: [Function], ror: [Function], lshift: [Function], tohex: [Function], rol: [Function], arshift: [Function] }, _void: [Function], JSON: { stringify: [Function], parse: [Function] }, Buffer: [Function], global: [Circular], Date: [Function], clearTimeout: [Function], _arr: [Function], RegExp: [Function], _regexp: [Function], Object: [Function], clearInterval: [Function], encodeURIComponent: [Function], _pairs: [Function], Boolean: [Function], setTimeout: [Function], decodeURIComponent: [Function], String: [Function], _break: {}, eval: [Function], _instanceof: [Function], _G: { COLONY_EMBED: false, to_binary: [Function], js_pairs: [Function], tostring: [Function], gcinfo: [Function], os: { exit: [Function], setlocale: [Function], date: [Function], getenv: [Function], difftime: [Function], remove: [Function], time: [Function], clock: [Function], tmpname: [Function], rename: [Function], execute: [Function] }, array_getter_length: [Function], pairs: [Function], js_define_getter: [Function], _colony_preload_on_init: 0, tonumber: [Function], js_typeof: [Function], funcproxies: { function () { }: undefined, function isString() { }: undefined, function () { }: undefined, function prefinish() { }: undefined, function () { }: undefined, function () { }: undefined, function isObject() { }: undefined, function resume() { }: undefined, function done() { }: undefined, function () { }: undefined, function chunkInvalid() { }: undefined, function () { }: undefined, function onwriteDrain() { }: undefined, function endWritable() { }: undefined, function () { }: undefined, function () { }: undefined, function decodeChunk() { }: undefined, function endReadable() { }: undefined, function Transform() { }: undefined, function PassThrough() { }: undefined, function Readable() { }: undefined, function isBuffer() { }: undefined, function () { }: undefined, function maybeReadMore() { }: undefined, function inherits() { }: undefined, function needMoreData() { }: undefined, function pipeOnDrain() { }: undefined, function ReadableState() { }: undefined, function () { }: undefined, function onwrite() { }: undefined, function resume__() { }: undefined, function doWrite() { }: undefined, function Stream() { }: undefined, function onEofChunk() { }: undefined, function debuglog() { }: undefined, function clearBuffer() { }: undefined, function () { }: undefined, function () { }: undefined, function emitReadable__() { }: undefined, function WriteReq() { }: undefined, function Duplex() { }: undefined, function maybeReadMore__() { }: undefined, function afterTransform() { }: undefined, function () { }: undefined, function WritableState() { }: undefined, function isFunction() { }: undefined, function flow() { }: undefined, function readableAddChunk() { }: undefined, function deprecate() { }: undefined, function needFinish() { }: undefined, function () { }: undefined, function () { }: undefined, function howMuchToRead() { }: undefined, function TransformState() { }: undefined, function afterWrite() { }: undefined, function finishMaybe() { }: undefined, function () { }: undefined, function onend() { }: undefined, function isNull() { }: undefined, function () { }: undefined, function () { }: undefined, function isArray() { }: undefined, function emitReadable() { }: undefined, function onwriteError() { }: undefined, function () { }: undefined, function isNumber() { }: undefined, function writeOrBuffer() { }: undefined, function isNullOrUndefined() { }: undefined, function () { }: undefined, function roundUpToNextPowerOf2() { }: undefined, function writeAfterEnd() { }: undefined, function () { }: undefined, function Writable() { }: undefined, function () { }: undefined, function validChunk() { }: undefined, function fromList() { }: undefined, function onwriteStateUpdate() { }: undefined, function () { }: undefined }, load: [Function], module: [Function], js_with: [Function], _G: [Circular], js_define_setter: [Function], js_instanceof: [Function], to_base64: [Function], coroutine: { resume: [Function], yield: [Function], status: [Function], wrap: [Function], create: [Function], running: [Function] }, js_in: [Function], wrap_timer_cb: [Function], colony: { js_tostring: [Function], js_pairs: [Function], js_valueof: [Function], bool_proto: { constructor: [Function] }, js_arguments: [Function], js_break: [Circular], obj_proto: { __defineSetter__: [Function], __defineGetter__: [Function], valueOf: [Function], hasInstance: [Function], hasOwnProperty: [Function], constructor: [Function], toString: [Function] }, js_func_proxy: [Function], js_getter_index: [Function], func_proto: {}, str_proto: { substring: [Function], match: [Function], toUpperCase: [Function], lastIndexOf: [Function], charAt: [Function], constructor: [Function], trim: [Function], toString: [Function], substr: [Function], slice: [Function], concat: [Function], charCodeAt: [Function], replace: [Function], split: [Function], toLowerCase: [Function], indexOf: [Function] }, js_arr: [Function], runEventLoop: [Function], js_with: [Function], cache: { _stream_transform: { exports: [Function] }, _stream_duplex: { exports: [Function] }, ./log-global.js: { exports: {} }, stream: { exports: [Function] }, events: { exports: { EventEmitter: [Function] } }, _stream_passthrough: { exports: [Function] }, _stream_writable: { exports: [Function] }, util: { exports: { inherits: [Function], isArray: [Function], deprecate: [Function], isBuffer: [Function], isString: [Function], debuglog: [Function], isNull: [Function], isNullOrUndefined: [Function], isFunction: [Function], isNumber: [Function], isObject: [Function] } }, _stream_readable: { exports: [Function] } }, arr_proto: { indexOf: [Function], slice: [Function], sort: [Function], shift: [Function], map: [Function], constructor: [Function], splice: [Function], unshift: [Function], forEach: [Function], toString: [Function], pop: [Function], push: [Function], concat: [Function], reverse: [Function], filter: [Function], join: [Function], reduce: [Function], some: [Function] }, js_instanceof: [Function], js_proto_get: [Function], js_setter_index: [Function], js_in: [Function], num_proto: { constructor: [Function], toFixed: [Function], toString: [Function] }, js_cont: [Circular], precache: { stream_writable: [Function], _stream_duplex: [Function], fs: [Function], stream_passthrough: [Function], ssert: [Function], uerystring: [Function], ls: [Function], os: [Function], _stream_readable: [Function], url: [Function], ttp: [Function], tream: [Function], repl: [Function], net: [Function], child_process: [Function], string_decoder: [Function], vents: [Function], events: [Function], stream_duplex: [Function], _structured_clone: [Function], _stream_passthrough: [Function], _stream_writable: [Function], https: [Function], ttps: [Function], http: [Function], tls: [Function], rypto: [Function], structured_clone: [Function], assert: [Function], crypto: [Function], ath: [Function], path: [Function], unycode: [Function], punycode: [Function], stream: [Function], dns: [Function], hild_process: [Function], dgram: [Function], gram: [Function], et: [Function], _stream_transform: [Function], tty: [Function], tring_decoder: [Function], lib: [Function], rl: [Function], epl: [Function], ns: [Function], querystring: [Function], uffer: [Function], buffer: [Function], ty: [Function], zlib: [Function], stream_readable: [Function], til: [Function], s: [Function], util: [Function], stream_transform: [Function] }, run: [Function], js_seq: [Function], _load: [Function], js_typeof: [Function], global: [Circular], js_obj: [Function], js_void: [Function], js_new: [Function], regex_proto: {}, _normalize: [Function] }, loadstring: [Function], augmentargs: [Function], string: { sub: [Function], upper: [Function], len: [Function], gfind: [Function], rep: [Function], find: [Function], match: [Function], char: [Function], dump: [Function], gmatch: [Function], reverse: [Function], byte: [Function], format: [Function], gsub: [Function], lower: [Function] }, xpcall: [Function], js_obj_index: [Function], _builtin: { _stream_transform: 3, _stream_duplex: 0, fs: 13, crypto: 9, zlib: 28, util: 27, stream: 22, os: 17, _stream_readable: 2, dgram: 10, url: 26, string_decoder: 23, tls: 24, tty: 25, buffer: 7, dns: 11, repl: 21, net: 16, child_process: 8, querystring: 20, punycode: 19, path: 18, assert: 6, events: 12, https: 15, _stream_writable: 4, _stream_passthrough: 1, _structured_clone: 5, http: 14 }, bit: [Circular], _VERSION: 'Lua 5.1', js_arguments: [Function], unpack: [Function], require: [Function], ret: [Function], js_func_proxy: [Function], next: [Function], package: { preload: { yajl: [Function], colony: [Function], colony-init: [Function], preload: [Function], http_parser: [Function], tm: [Function], colony-js: [Function], cli: [Function], colony-node: [Function], hsregex: [Function], bit32: [Function] }, loadlib: [Function], loaded: { string: [Circular], package: [Circular], bit: [Circular], preload: true, os: [Circular], table: { pack: [Function], setn: [Function], insert: [Function], getn: [Function], foreachi: [Function], maxn: [Function], foreach: [Function], concat: [Function], augment: [Function], sort: [Function], remove: [Function] }, math: { log: [Function], max: [Function], acos: [Function], huge: inf, ldexp: [Function], pi: 3.1415926535898, cos: [Function], tanh: [Function], pow: [Function], deg: [Function], tan: [Function], cosh: [Function], sinh: [Function], random: [Function], randomseed: [Function], frexp: [Function], ceil: [Function], floor: [Function], rad: [Function], abs: [Function], sqrt: [Function], modf: [Function], asin: [Function], min: [Function], mod: [Function], fmod: [Function], log10: [Function], atan2: [Function], exp: [Function], sin: [Function], atan: [Function] }, coroutine: [Circular], bit32: [Circular], yajl: { parser: [Function], to_value: [Function], generator: [Function], to_string: [Function], null: null }, debug: { getupvalue: [Function], debug: [Function], sethook: [Function], getmetatable: [Function], gethook: [Function], setmetatable: [Function], setlocal: [Function], traceback: [Function], setfenv: [Function], getinfo: [Function], setupvalue: [Function], getlocal: [Function], getregistry: [Function], getfenv: [Function] }, colony: [Circular], hsregex: { regmatch_create: [Function], regmatch_so: [Function], regex_nsub: [Function], NOSUB: 16, regmatch_eo: [Function], regex_create: [Function], re_comp: [Function], re_exec: [Function], regfree: [Function], regerror: [Function], ADVANCED: 3 }, http_parser: { VERSION_MINOR: 1, parseUrl: [Function], VERSION_MAJOR: 2, new: [Function] }, io: { lines: [Function], write: [Function], close: [Function], flush: [Function], open: [Function], output: [Function], type: [Function], read: [Function], stderr: file (0x7fff7b9844a0), stdin: file (0x7fff7b984370), input: [Function], stdout: file (0x7fff7b984408), popen: [Function], tmpfile: [Function] }, colony-init: true, tm: { exit: [Function], tcp_readable: [Function], buffer_write_double: [Function], fs_rename: [Function], buffer_copy: [Function], clear_raw_timeout: [Function], udp_receive: [Function], fs_length: [Function], buffer_set: [Function], buffer_write_int8: [Function], fs_close: [Function], buffer_write_uint16be: [Function], buffer_read_float: [Function], fs_readable: [Function], tcp_accept: [Function], udp_readable: [Function], set_raw_timeout: [Function], FS_TYPE_INVALID: 0, tcp_connect: [Function], fs_write: [Function], fs_read: [Function], buffer_read_uint16be: [Function], buffer_fill: [Function], buffer_write_int16le: [Function], buffer_read_uint8: [Function], tcp_read: [Function], udp_close: [Function], buffer_write_uint32le: [Function], buffer_read_uint32le: [Function], buffer_read_int32le: [Function], fs_dir_create: [Function], FS_TYPE_DIR: 2, buffer_write_uint16le: [Function], FS_TYPE_MOUNT_FAT: 3, _sync_gethostbyname: [Function], CREATE_ALWAYS: 1536, buffer_read_uint16le: [Function], CREATE_NEW: 2560, OPEN_ALWAYS: 512, fs_type: [Function], RDWR: 2, WRONLY: 1, udp_open: [Function], RDONLY: 0, buffer_get: [Function], FS_TYPE_FILE: 1, udp_send: [Function], fs_truncate: [Function], itoa: [Function], random_bytes: [Function], fs_dir_close: [Function], udp_listen: [Function], tcp_write: [Function], fs_dir_open: [Function], buffer_tostring: [Function], buffer_write_int16be: [Function], log: [Function], hostname_lookup: [Function], buffer_create: [Function], buffer_write_int32le: [Function], buffer_write_float: [Function], uptime_micro: [Function], buffer_read_double: [Function], fs_destroy: [Function], buffer_read_int16be: [Function], buffer_write_int32be: [Function], buffer_read_uint32be: [Function], tcp_close: [Function], OPEN_EXISTING: 0, fs_dir_read: [Function], fs_seek: [Function], buffer_read_int16le: [Function], buffer_write_uint32be: [Function], uptime_init: [Function], fs_open: [Function], buffer_write_uint8: [Function], buffer_read_int8: [Function], buffer_read_int32be: [Function], tcp_listen: [Function], tcp_open: [Function] }, cli: userdata: 0x10d855f10, colony-node: true, _G: [Circular], colony-js: true }, loaders: { 1: [Function], 2: [Function], 3: [Function], 4: [Function] }, cpath: './?.so;/usr/local/lib/lua/5.1/?.so;/usr/local/lib/lua/5.1/loadall.so', config: '/
+# ;
+# ?
+# !
+# -', path: './?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua;/usr/local/lib/lua/5.1/?.lua;/usr/local/lib/lua/5.1/?/init.lua', seeall: [Function] }, err: 0, js_wrap_module: [Function], ipairs: [Function], write_buf: [Function], assert: [Function], rawequal: [Function], setfenv: [Function], collectgarbage: [Function], arg: { 1: '/Users/tim/Code/technical/workspace/firmware/deps/runtime/out/Release/colony', 2: 'log-global.js' }, newproxy: [Function], js_arr: [Function], array_setter: [Function], _builtin_load: [Function], from_base64: [Function], _colony: [Circular], _colony_unhandled_exception: [Function], rawset: [Function], table: [Circular], decodeURIComponent: [Function], encodeURIComponent: [Function], fd: userdata: 0x7fe8aa474918, print: [Function], fs_readfile: [Function], math: [Circular], _colony_emit: [Function], pcall: [Function], js_obj: [Function], global: [Circular], type: [Function], read_buf: [Function], getfenv: [Function], select: [Function], js_seq: [Function], setmetatable: [Function], rawget: [Function], from_binary: [Function], js_new: [Function], io: [Circular], dofile: [Function], getmetatable: [Function], debug: [Circular], error: [Function], loadfile: [Function] }, _truthy: [Function], ReferenceError: [Function], clearImmediate: [Function], _error: [Function], parseInt: [Function], process: { exit: [Function], platform: 'colony', memoryUsage: [Function], nextTick: [Function], versions: { node: '0.10.0', colony: '0.10.0' }, argv: [], binding: [Function], cwd: [Function], stdout: {}, stdin: {}, env: {}, ref: [Function], EventEmitter: [Function], unref: [Function] }, parseFloat: [Function], this: [Circular], _xpcall: [Function], _debug: [Circular], inf: inf, console: { error: [Function], log: [Function], info: [Function], warn: [Function] }, URIError: [Function], _obj: [Function], SyntaxError: [Function], isNaN: [Function], RangeError: [Function], TypeError: [Function], EvalError: [Function], _arguments: [Function], Error: [Function], _with: [Function], Array: [Function], _seq: [Function], _typeof: [Function] }
+ok 657 test/issues/log-global.js
+
+# dns.js
+ok 658
+ok 659
+# [ '31.13.77.65' ]
+ok 660 test/net/dns.js
+
+# http-get-query.js
+# 200
+ok 661
+ok 662 test/net/http-get-query.js
+
+# http-get.js
+ok 663
+# statusCode 200
+# received 10545 bytes
+# received 3453 bytes
+ok 664 test/net/http-get.js
+
+# http-req-ip.js
+ok 665
+# statusCode 200
+# received 13548 bytes
+# received 544 bytes
+ok 666 test/net/http-req-ip.js
+
+
+1..666
+# tests 666
+# pass  659
+# todo  7
