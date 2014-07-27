@@ -14,7 +14,7 @@ Check out [this Tessel forum post](https://forums.tessel.io/t/ir-example-usage-d
 Installation
 ===============
 
-`npm install ir-attx4`
+`npm install ir-codes`
 
 Example
 ===============
